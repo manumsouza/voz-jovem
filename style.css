@@ -63,3 +63,11 @@ footer a{color:var(--branco)}
 .hero.capa .tarja{background:var(--vermelho);color:var(--branco)}
 .hero.capa .btn.vazio{color:var(--branco);border-color:var(--branco)}
 .hero.capa .btn.vazio:hover{background:var(--branco);color:var(--preto);border-color:var(--branco)}
+/* capa no celular: foto inteira em cima, texto embaixo */
+@media(max-width:700px){
+.hero.capa{display:block;min-height:0;padding:0}
+.hero.capa::after{display:none}
+.hero.capa .capa-img{position:static;width:100%;height:auto;opacity:1;object-fit:contain}
+.hero.capa .wrap{padding-top:32px;padding-bottom:44px}
+.hero.capa h1{font-size:clamp(2.4rem,13vw,3.4rem)}
+}
